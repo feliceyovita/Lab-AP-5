@@ -1,28 +1,37 @@
 #include <iostream>
-#include <string>
+#include <cmath>
 using namespace std;
+
+double hitungLP(double aS, double tS, double tPrisma) {
+    double luasAlas = 0.5 * aS * tS;
+    
+    double lSisi = 3 * aS * tPrisma;
+    
+    return 2 * luasAlas + lSisi;
+}
+
+double hV(double aS, double tS, double tPrisma) {
+    double luasAlas = 0.5 * aS * tS;
+    
+    return luasAlas * tPrisma;
+}
 
 int main() {
     system("cls");
-    string nama, kom;
-    int nim;
-    float ipk;
+    double aS, tS, tPrisma;
 
-    cout << "Pendataan Mahasiswa = " << endl;
-    cout << "Nama      = ";
-    getline(cin, nama);
-    cout << "NIM       = ";
-    cin >> nim;
-    cout << "Kom       = ";
-    cin >> kom;
-    cout << "IPK       = ";
-    cin >> ipk;
+    cout << "Panjang alas  : ";
+    cin >> aS;
+    cout << "Tinggi        : ";
+    cin >> tS;
+    cout << "Tinggi prisma : ";
+    cin >> tPrisma;
 
-    // Menampilkan data yang dimasukkan
-    cout << "\nData Mahasiswa" << endl;
-    cout << "Nama: " << nama << endl;
-    cout << "NIM: " << nim << endl;
-    cout << "Kom: " << kom << endl;
-    cout << "IPK: " << ipk << endl;
+    double lPermukaan = hitungLP(aS, tS, tPrisma);
+    double v = hV(aS, tS, tPrisma);
+
+    cout << "Luas permukaan : " << lPermukaan << endl;
+    cout << "Volume         : " << v << endl;
+
     return 0;
 }
