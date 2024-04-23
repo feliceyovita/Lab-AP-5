@@ -92,3 +92,8 @@ int main() {
         
     return 0;
 }
+
+/*urutan prioritas:
+aritmatika : ++ -- , - , * / % , + - 
+bitwise : ~ , >> << , & , ^ , |
+logika dan relasi: ! , > >= < <= , == != , && , ||*/
