@@ -35,4 +35,4 @@ int main() {
     }
 
     return 0;
-} buat agar 5 for cabangnya berada dalam satu for yang diawal
+}
